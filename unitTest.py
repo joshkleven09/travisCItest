@@ -1,11 +1,7 @@
 import unittest
-from HelloWorld import HelloWorldClass
+import HelloWorld as HW
 
-class TestForTravisCI(unittest.TestCase):
-    def test_HelloWorld(self):
-        hello = HelloWorldClass()
-        result = hello.printHelloWorld()
-        self.assertEqual("Hello World", result)
+def test_HelloWorld():
+    result = HW.printHelloWorld()
+    assert result == "Hello World!"
 
-if __name__ == '__main__':
-    unittest.main()
